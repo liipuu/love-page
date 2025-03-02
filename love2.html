@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表白页面</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* 渐变背景 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* 容器样式 */
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9); /* 半透明背景 */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+            animation: fadeIn 2s ease-in-out; /* 淡入动画 */
+        }
+
+        /* 标题样式 */
+        h1 {
+            color: #e74c3c;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        /* 文字样式 */
+        p {
+            font-size: 1.2em;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 图片样式 */
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%; /* 圆形图片 */
+            margin: 20px 0;
+            border: 5px solid #e74c3c;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 按钮样式 */
+        button {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #c0392b;
+        }
+
+        /* 隐藏内容的样式 */
+        .hidden {
+            display: none;
+        }
+
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* 飘落的心形 */
+        .heart {
+            position: absolute;
+            top: -50px;
+            animation: fall 5s linear infinite;
+            font-size: 2em;
+            color: #e74c3c;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-50px) rotate(0deg); }
+            100% { transform: translateY(100vh) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 飘落的心形 -->
+    <div class="heart">❤️</div>
+    <div class="heart" style="left: 20%; animation-delay: 1s;">❤️</div>
+    <div class="heart" style="left: 40%; animation-delay: 2s;">❤️</div>
+    <div class="heart" style="left: 60%; animation-delay: 3s;">❤️</div>
+    <div class="heart" style="left: 80%; animation-delay: 4s;">❤️</div>
+
+    <!-- 主要内容 -->
+    <div class="container">
+        <h1>宝宝！</h1>
+        <p>我是不是很厉害</p>
+        <!-- 1739169109764.png-->
+        <img src="1739169109764.png" alt="我们的回忆">
+        <button onclick="showMore()">≥≤</button>
+        <p id="moreText" class="hidden">夸夸我，我是最棒的一条虫</p>
+    </div>
+
+    <script>
+        function showMore() {
+            document.getElementById('moreText').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
